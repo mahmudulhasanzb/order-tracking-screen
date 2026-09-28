@@ -34,12 +34,12 @@ export function ProductSummaryCard({ order }: ProductSummaryCardProps) {
       {/* Header */}
       <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
         <div>
-          <h2 className="text-sm font-bold text-white flex items-center gap-2">
+          <h2 className="text-sm font-semibold text-white flex items-center gap-2">
             <Package className="w-4 h-4 text-emerald-400" />
-            <span>Items in Shipment ({order.items.reduce((acc, i) => acc + i.quantity, 0)})</span>
+            <span>Order Summary ({order.items.reduce((acc, i) => acc + i.quantity, 0)})</span>
           </h2>
           <p className="text-[11px] text-zinc-400 mt-0.5">
-            Placed on {order.placedAt}
+            Placed {order.placedAt}
           </p>
         </div>
 

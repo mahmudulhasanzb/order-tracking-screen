@@ -23,15 +23,10 @@ export function TimelineProgress({ steps }: TimelineProgressProps) {
     <div id="delivery-timeline" className="mx-4 sm:mx-5 mb-4 rounded-2xl border border-zinc-800 bg-zinc-900/90 overflow-hidden shadow-lg">
       {/* Header */}
       <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
-        <div>
-          <h2 className="text-sm font-bold text-white flex items-center gap-2">
-            <Clock className="w-4 h-4 text-emerald-400" />
-            <span>Delivery Timeline & Milestones</span>
-          </h2>
-          <p className="text-[11px] text-zinc-400 mt-0.5">
-            Transparent end-to-end tracking updates
-          </p>
-        </div>
+        <h2 className="text-sm font-semibold text-white flex items-center gap-2">
+          <Clock className="w-4 h-4 text-emerald-400" />
+          <span>Tracking History</span>
+        </h2>
 
         <button
           onClick={() => setIsExpanded(!isExpanded)}

@@ -33,13 +33,10 @@ export function DeliveryAddressCard({ address, carrier }: DeliveryAddressCardPro
       {/* Header */}
       <div className="p-4 border-b border-zinc-800 flex items-center justify-between">
         <div>
-          <h2 className="text-sm font-bold text-white flex items-center gap-2">
+          <h2 className="text-sm font-semibold text-white flex items-center gap-2">
             <MapPin className="w-4 h-4 text-emerald-400" />
-            <span>Destination & Courier Specs</span>
+            <span>Delivery Address</span>
           </h2>
-          <p className="text-[11px] text-zinc-400 mt-0.5">
-            Verified delivery location
-          </p>
         </div>
 
         <button

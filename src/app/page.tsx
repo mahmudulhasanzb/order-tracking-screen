@@ -22,14 +22,7 @@ import { DisputeClaimModal } from '@/components/DisputeClaimModal';
 import { RescheduleModal } from '@/components/RescheduleModal';
 import { LoadingSkeleton } from '@/components/LoadingSkeleton';
 import { ErrorStateCard } from '@/components/ErrorStateCard';
-import {
-  Wifi,
-  Battery,
-  AlertTriangle,
-  PackageCheck,
-  Clock,
-  Sparkles,
-} from 'lucide-react';
+import { Wifi, Battery } from 'lucide-react';
 
 function OrderTrackingContent() {
   const searchParams = useSearchParams();
@@ -208,75 +201,6 @@ function OrderTrackingContent() {
                 onOpenReschedule={() => setIsRescheduleModalOpen(true)}
               />
             )}
-          </div>
-        </div>
-
-        {/* Evaluator Architecture & Requirements Verification Panel */}
-        <div className="w-full max-w-2xl mt-6 p-4 rounded-2xl bg-zinc-900/60 dark:bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-300">
-          <div className="flex items-center gap-2 mb-2">
-            <Sparkles className="w-4 h-4 text-emerald-400" />
-            <h3 className="font-bold text-white text-xs font-mono uppercase tracking-wider">
-              Implementation Specification Breakdown (REQUIREMENTS.md)
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            {/* Req 1 */}
-            <div
-              onClick={() => handleScenarioChange('delayed')}
-              className={`p-3 rounded-xl border cursor-pointer transition-all ${
-                currentScenario === 'delayed'
-                  ? 'bg-amber-500/10 border-amber-500/50 text-amber-200 ring-1 ring-amber-500/30'
-                  : 'bg-zinc-950/60 border-zinc-800/80 hover:border-zinc-700'
-              }`}
-            >
-              <div className="flex items-center gap-1.5 font-bold text-amber-400 mb-1">
-                <AlertTriangle className="w-3.5 h-3.5 shrink-0" />
-                <span>1. Delayed Order</span>
-              </div>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Clear weather hold notice, original vs revised ETA, $20 courtesy credit, priority
-                reschedule & live agent dispatch.
-              </p>
-            </div>
-
-            {/* Req 2 */}
-            <div
-              onClick={() => handleScenarioChange('delivered_unreceived')}
-              className={`p-3 rounded-xl border cursor-pointer transition-all ${
-                currentScenario === 'delivered_unreceived'
-                  ? 'bg-rose-500/10 border-rose-500/50 text-rose-200 ring-1 ring-rose-500/30'
-                  : 'bg-zinc-950/60 border-zinc-800/80 hover:border-zinc-700'
-              }`}
-            >
-              <div className="flex items-center gap-1.5 font-bold text-rose-400 mb-1">
-                <PackageCheck className="w-3.5 h-3.5 shrink-0" />
-                <span>2. Delivered / Not Received</span>
-              </div>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Driver drop photo with zoom, GPS coordinates stamp, 3-point search checklist, and
-                1-tap dispute claim for instant replacement or refund.
-              </p>
-            </div>
-
-            {/* Req 3 */}
-            <div
-              onClick={() => handleScenarioChange('tracking_pending')}
-              className={`p-3 rounded-xl border cursor-pointer transition-all ${
-                currentScenario === 'tracking_pending'
-                  ? 'bg-purple-500/10 border-purple-500/50 text-purple-200 ring-1 ring-purple-500/30'
-                  : 'bg-zinc-950/60 border-zinc-800/80 hover:border-zinc-700'
-              }`}
-            >
-              <div className="flex items-center gap-1.5 font-bold text-purple-400 mb-1">
-                <Clock className="w-3.5 h-3.5 shrink-0" />
-                <span>3. Tracking Pending</span>
-              </div>
-              <p className="text-[11px] text-zinc-400 leading-relaxed">
-                Eliminates empty screen with warehouse fulfillment telemetry, picking countdown,
-                and real-time SMS alert toggle.
-              </p>
-            </div>
           </div>
         </div>
       </main>
