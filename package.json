@@ -1,6 +1,8 @@
 {
   "name": "order-tracking-screen",
   "version": "0.1.0",
+  "description": "Modern mobile order tracking and delivery intelligence screen built with Next.js 16 and Tailwind CSS v4.",
+  "author": "Mahmudul Hasan <https://github.com/mahmudulhasanzb>",
   "private": true,
   "scripts": {
     "dev": "next dev",
